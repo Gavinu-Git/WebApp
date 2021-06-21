@@ -1,0 +1,278 @@
+:root{--green:rgb(164, 235, 248); --black:var(--black)}
+
+*{
+    font-family: 'Times New Roman', Times, serif; text-decoration: none; text-transform: capitalize; 
+    transition: all 0.2s linear;
+    margin: 0; padding: 0;
+    box-sizing: border-box; outline: none; border: none;
+}
+
+*::selection{
+    background: rgb(85, 109, 160);
+    color: white;
+}
+
+html{
+    font-size: 90%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section{padding:0.2rem 1rem;}
+
+/* Navigation Bar */
+.Header{
+    background: rgb(172, 181, 233);
+    display: flex;
+    align-items: center; justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.Logo{
+    color: var(--black); font-weight: bolder; font-size: 3rem;
+}
+
+.Logo i{padding-right: 0.5rem; color: rgb(28, 27, 90);}
+
+.Header .search-Box-container{ display: flex; height: 2.5rem;}
+
+.Header .search-Box-container #search-Box{
+    height: 100%; width: 100%; padding: 1rem; 
+    font-size: 1rem; color: rgb(144, 163, 184); border: .2rem solid rgb(157, 158, 184);
+    text-transform: none;
+}
+
+.Header .search-Box-container label{
+height: 97%; width: 5rem;
+font-size: 1.6rem; line-height: 2.7rem; color: white; background: rgb(55, 65, 126);
+text-align: center; cursor: pointer;
+}
+
+.Header .search-Box-container label:hover{background: rgb(42, 60, 163);}
+
+.nav-Bar{
+    background: white; box-shadow: 0.5rem 0.7rem rgb(172, 181, 233); position: relative;
+    display: flex;
+    align-items: center; justify-content: space-between;
+    padding: 1.3rem 9%;
+}
+
+.nav-Bar.active{position: fixed; top: 0; left: 0; right: 0; z-index: 10000;}
+
+.nav-Bar .horizontal-Nav a{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    color: rgb(22, 28, 90);
+}
+.nav-Bar .horizontal-Nav a:hover{background: rgb(42, 60, 163); color: white;}
+
+.nav-Bar .Icons a{ font-size: 1.5rem; color: rgb(30, 39, 133); padding-left: 2rem;}
+.nav-Bar .Icons a:hover{color: rgb(42, 60, 163);}
+
+#menu-Bar-icon{
+    font-size: 2rem; border-radius: 0.2rem; border:0.2rem solid rgb(28, 35, 110);
+    padding: 0.8rem 1.5rem;
+    color: rgb(30, 39, 133);
+    cursor: pointer; display: none;}
+
+/* Home Page*/
+.Home{display: flex; align-items: center; justify-content: center;flex-wrap: wrap;}
+
+.Home .Home_Image{flex:1 1 25rem; padding-top: 1rem;}
+.Home .Home_Image img{width:50%; }
+
+.Home .home_Content{flex: 1rem 1rem 25rem;}
+.Home .home_Content span{ font-size: 3rem; color: rgba(30, 25, 98, 0.849);}
+.Home .home_Content h3{ font-size: 5rem; color: rgb(21, 18, 70);}
+
+.Home .home_Content .Button{
+    display: inline-block; 
+    margin-top: 2rem; padding:0.8rem 3rem; font-size: 3rem; text-align: center; cursor: pointer;
+    background: rgb(174, 174, 231);
+}
+.Home .home_Content .Button:hover{
+    background: rgb(130, 130, 204);
+}
+
+/* Quick Deals */
+.Quick_Deals-Container{display: flex; flex-flow: wrap; gap: 1.5rem;}
+
+.Quick_Deals-Container .Container{flex: 1 1 40rem; height: 25rem; overflow: hidden; position: relative;}
+
+.Quick_Deals-Container .Container img{object-fit: cover; height: 100%; width: 100%;}
+
+.Quick_Deals-Container .Container .Content{
+    position: absolute; top: 0%; left: 45%; 
+    transform: translateY(50%);
+}
+.Quick_Deals-Container .Container .Content h3{font-size:2.5rem;color:rgb(42, 42, 114);font-style: italic;}
+
+.Quick_Deals-Container .Container .Content p{
+    font-size: 1.7rem; text-align: center; padding: 1rem; margin-top: 0.5rem;
+    color: rgb(73, 73, 180); background-color: whitesmoke;
+}
+
+.Quick_Deals-Container .Container .Content .Button{
+    display: inline-block; 
+    margin-top: 1.5rem; padding:1rem 2rem; font-size: 2rem; text-align: center; cursor: pointer;
+    background: rgb(42, 42, 114); color: white;
+}
+.Quick_Deals-Container .Container .Content .Button:hover{background: rgb(75, 75, 158);}
+
+.Quick_Deals-Container .Container:hover img{transform: scale(1.2) rotate(-5deg);}
+
+/*Categories*/
+.Categories .Heading{
+    text-align:center; text-transform:uppercase; padding:2%; font-size:200%; 
+    color:rgb(28, 27, 90) ;
+}
+.Categories .Heading span{color: rgb(69, 69, 143); text-transform: uppercase;}
+
+.Categories .Category-Container{display: flex; gap: 1.5rem; flex-wrap:wrap; justify-content: center;}
+
+.Categories .Category-Container .Container{
+    border: 0.3rem solid rgb(28, 27, 90); border-radius: 0.2rem;
+    text-align: center; padding: 0.3rem; 
+}
+
+.Categories .Category-Container .Container img{width: 20rem; height: 10rem; margin: 1rem 2rem 1rem;}
+
+.Categories .Category-Container .Container h3{ font-size: 2rem; color: rgb(28, 35, 110);}
+
+.Categories .Category-Container .Container p{font-size: 1.7rem; color: rgb(73, 73, 180); padding: 0rem;}
+
+.Categories .Category-Container .Container .Button{
+    display: block; 
+    padding:2%; font-size: 150%; text-align: center; cursor: pointer;
+    background: rgb(42, 42, 114); color: white;
+}
+.Categories .Category-Container .Container .Button:hover{background: rgb(75, 75, 158);}
+
+/*Latest Products*/
+.Latest-Products .Heading{
+    text-align:center; text-transform:uppercase; padding:2%; font-size:200%; 
+    color:rgb(28, 27, 90) ;
+}
+.Latest-Products .Heading span{color: rgb(69, 69, 143); text-transform: uppercase;}
+
+.Latest-Products .Products-Container{ display: flex; flex-wrap: wrap; gap: 1rem;}
+
+.Latest-Products .Products-Container .Container{
+    flex:1 1 30rem; padding: 2rem; 
+    text-align: center;overflow: hidden; position:relative;
+    border: 0.1rem solid rgb(28, 27, 90); border-radius: 0.5rem;
+}
+
+.Latest-Products .Products-Container .Container img{ height: 20rem; width: 22rem;}
+
+.Latest-Products .Products-Container .Container .Discount{
+    position: absolute; font-size: 2rem;
+    top:1rem; left: 1rem; padding: 0.7rem 1rem;
+    background: rgba(236, 233, 233, 0.89);
+    color: rgb(28, 27, 90);
+}
+
+.Latest-Products .Products-Container .Container .Icons{position: absolute; top: 0.5rem; right:-6rem ;}
+.Latest-Products .Products-Container .Container:hover .Icons{ right:1rem ;}
+
+.Latest-Products .Products-Container .Container .Icons a{
+    display: block; height: 4rem; width: 4rem; line-height: 4.5rem; font-size: 1.5rem; margin-top: 0.5rem; 
+    color: rgb(28, 27, 90); background: rgba(160, 178, 218, 0.609);
+    border-radius: 50%;
+}
+.Latest-Products .Products-Container .Container .Icons a:hover{background: rgb(175, 190, 221);}
+
+.Latest-Products .Products-Container .Container h3{color: rgb(28, 27, 90); font-size: 2rem;}
+
+.Latest-Products .Products-Container .Container .Rating i{
+    padding: 1rem 0.1rem;
+    font-size: 1.5rem;
+    color: gold;
+}
+
+.Latest-Products .Products-Container .Container .Price{
+    font-size: 1.5rem; padding: 0.5rem 0;
+    color: rgb(22, 28, 90);
+}
+.Latest-Products .Products-Container .Container .Price span{
+    font-size: 1.3rem; color: rgb(130, 130, 204); text-decoration: line-through;
+}
+
+.Latest-Products .Products-Container .Container .Quantity{
+    display: flex; align-items: center; justify-content: center; padding-top: 1rem;
+}
+
+.Latest-Products .Products-Container .Container .Quantity span{ padding: 0.2rem; font-size: 1.5rem;}
+
+.Latest-Products .Products-Container .Container .Quantity input{
+    border: 0.1rem solid rgb(21, 18, 70);color: rgb(22, 28, 90) ; 
+    font-size: 1.5rem;font-weight: bolder; padding: .1rem; margin-bottom: 1rem;
+}
+
+.Latest-Products .Products-Container .Container .Button{
+    display:block; 
+    padding:3%; font-size: 160%; text-align: center; cursor: pointer;
+    background: rgb(42, 42, 114); color: white;
+}
+.Latest-Products .Products-Container .Container .Button:hover{background: rgb(75, 75, 158);}
+
+/* Media Queries */
+@media (min-width:1440px){ /* Page-Content Sizing */
+    .Categories .Heading{font-size: 300%;}
+    .Latest-Products .Heading{font-size: 300%;}
+}
+
+@media (max-width:1200px){ /* Page-Content Sizing */
+    
+    .Home .home_Content .Button{font-size: 1.5rem;}
+    
+    .Quick_Deals-Container .Container{flex: 1 1 25rem; height: 20rem;}
+    .Quick_Deals-Container .Container .Content h3{font-size: 2rem;}
+    .Quick_Deals-Container .Container .Content p{font-size: 1.3rem;}
+    .Quick_Deals-Container .Container .Content .Button{font-size: 1.1rem;}
+} 
+
+@media (max-width:991px){ 
+    .Header, .nav-Bar{padding: 2rem;}
+
+    section{padding: 2rem;}
+ } 
+
+@media (max-width:870px){ /* Menu-Content Sizing */
+    #menu-Bar-icon{display: initial;}
+
+    .Header, .nav-Bar{padding: 0.8rem;}
+
+    .nav-Bar .horizontal-Nav{
+        position: absolute; top: 100%; left: 0; right: 0; padding: 1rem 0.5rem ; display: none;
+        background: lightblue; 
+    }
+
+    .nav-Bar .horizontal-Nav.active{display: initial;}
+
+    .nav-Bar .horizontal-Nav a{
+        font-size: 1.5rem; display: block; text-align: center; background: white;
+        padding: 0.7rem; margin: 0.5rem;
+    }     
+
+    .Home {text-align: center;}
+    .Home .home_Content h3{font-size: 2rem;}
+    .Home .home_Content span{font-size: 2rem;}
+
+    .Quick_Deals-Container .Container{flex: 1 1 20rem; height: 18rem;}
+    .Quick_Deals-Container .Container .Content{top: -10%; left: 38%; }
+}
+
+@media (max-width:450px){ 
+    html{ font-size: 80%;} /* Page-Content Sizing */
+
+    .Header{flex-flow: column;} 
+
+    .Header .search-Box-container{width: 100%; margin-top: 1rem;} /* Search-Bar Sizing */
+
+    .Logo{font-size: 2.5rem;}
+
+    .Quick_Deals-Container .Container .Content{top: 0%; left: 35%;}
+ }
